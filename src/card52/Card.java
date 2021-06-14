@@ -1,18 +1,15 @@
-/*
- * CARD
- *  
- * Contents:
- *  - Rank and Suit Variables
- *  - Getters and Setters for Rank and Suit Variables 
- *  - toString for getting a name for the Card.
- *  - Shorthand "toString" method to provide a shorthand for brevity.
- *
- *
- */
 package card52;
 
 /**
- *
+ * Card
+ * 
+ * Class for Cards in a Deck.
+ * 
+ * Contains Rank and Suit as attributes.
+ * 
+ * Comes with toString.
+ * 
+ * 
  * @author jrcro
  */
 public class Card {
