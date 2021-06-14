@@ -44,6 +44,9 @@ public class Deck {
      * Initializes cards using a nested for loop.
      * Ranks, then suits.
      * 
+     * The order simulates a real-life card deck.
+     * 
+     * 
      */
     private void initializeDeck(){
         
