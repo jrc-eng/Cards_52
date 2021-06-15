@@ -62,6 +62,10 @@ public class Card {
     {
         switch(rank)
         {
+            //The Ace
+            case 14:
+                return "Ace";
+            
             case 13:
                 return "King";
             case 12:

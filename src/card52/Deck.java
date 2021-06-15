@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import java.lang.Exception;
 
+import java.util.Random;
+
 /**
  * Deck
  * 
@@ -80,10 +82,15 @@ public class Deck {
                     break;
             }
             
+            //Add the ace.
+            
+            deck.add(new Card(14, currentSuit));
+            
             //Nested for-loop:  Add cards by Rank.
             for (int r = 2 ; r <= RANKS ; r++)
             {
-                deck.add(new Card(r, currentSuit));
+                Card c = new Card(r, currentSuit);                 
+                deck.add(c);
             }
             
         }
@@ -129,4 +136,37 @@ public class Deck {
         deck.add(c);
     }
     
+    public boolean isEmpty()
+    {
+        return deck.isEmpty();
+    }
+    
+    public void shuffle()
+    {
+        if(deck.isEmpty())
+        {
+            return;
+        }
+        
+        int swapTimes = deck.size();
+        
+        int randomNum = 0;
+        
+        Random random = new Random();
+        
+        for (int x = 0 ; x < swapTimes ; x++)
+        {
+            randomNum = Math.abs(random.nextInt() % swapTimes);
+            
+            System.out.println(randomNum);
+            
+            Card c = deck.remove(randomNum);
+            
+            //We then add it to the front of the deck, and we do this for all the other numbers.
+            deck.add(0, c);
+            
+            
+            
+        }
+    }
 }
