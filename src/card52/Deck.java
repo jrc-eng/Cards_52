@@ -158,8 +158,6 @@ public class Deck {
         {
             randomNum = Math.abs(random.nextInt() % swapTimes);
             
-            System.out.println(randomNum);
-            
             Card c = deck.remove(randomNum);
             
             //We then add it to the front of the deck, and we do this for all the other numbers.
