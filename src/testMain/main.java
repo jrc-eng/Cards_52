@@ -7,6 +7,9 @@ package testMain;
 
 import card52.Card;
 import card52.Deck;
+import imageGetter.CardImageGetter;
+import java.io.File;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -22,6 +25,11 @@ public class main {
         try{
             Card c = d.drawCard();
             System.out.println(c);
+            
+            File f = CardImageGetter.getFileFromCard(c);
+            
+            System.out.println(f.exists());
+            
         }
         catch(Exception e)
         {
@@ -31,5 +39,8 @@ public class main {
         
         
         
+        
     }
+
+
 }
